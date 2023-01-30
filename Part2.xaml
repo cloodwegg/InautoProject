@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="part_2" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="836.8,824.8" sap2010:WorkflowViewState.IdRef="part_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugas="clr-namespace:UiPath.GSuite.Activities.Sheets;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="part_2" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="836.8,824.8" sap2010:WorkflowViewState.IdRef="part_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:bz="clr-namespace:BalaReva.ZipUnzip;assembly=BalaReva.Zip" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -38,6 +38,8 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>BalaReva.Zip</x:String>
+      <x:String>BalaReva.ZipUnzip</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -69,6 +71,7 @@
       <AssemblyReference>UiPath.GSuite</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>BalaReva.Zip</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="part2" sap:VirtualizedContainerService.HintSize="633.6,720" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -92,19 +95,19 @@
           <av:PointCollection x:Key="ConnectorLocation">300,176.8 300,222.8</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" ContinueOnError="True" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="200,53.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://docs.google.com/forms/d/1DdIN69YfR4G2WEawoH38-GYE4Agp8qYE4SaOpQ_V88Y/edit?ts=63cec34f">
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" ContinueOnError="True" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="200,53.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://docs.google.com/forms/d/1DdIN69YfR4G2WEawoH38-GYE4Agp8qYE4SaOpQ_V88Y/edit?ts=63cec34f">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,1488" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,638.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -116,7 +119,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1e3c510-7b75-496b-b265-91841e596d90" InformativeScreenshot="dc3b57bf66daffaeff5d3ffb95bff3a6" Selector="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='Week 1 - Google Forms — Mozilla Firefox' /&gt;&lt;ctrl name='Week 1 - Google Forms — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='Week 1 - Google Forms' role='document' /&gt;&lt;ctrl name='Responses 16' role='page tab' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1e3c510-7b75-496b-b265-91841e596d90" InformativeScreenshot="60276b9a904017849a9fe120cc5567d3" Selector="&lt;webctrl aaname='Responses' parentid='tJHJj' tag='DIV' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -126,7 +129,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -138,7 +141,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea87a31a-c1ec-4d27-8d56-293b625137bf" InformativeScreenshot="f343a44e0e5dd2067b761a0ba9703603" Selector="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='Week 1 - Google Forms — Mozilla Firefox' /&gt;&lt;ctrl name='Week 1 - Google Forms — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='Week 1 - Google Forms' role='document' /&gt;&lt;ctrl name='View in Sheets' role='push button' /&gt;&lt;ctrl name='View in Sheets' role='editable text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea87a31a-c1ec-4d27-8d56-293b625137bf" InformativeScreenshot="9fada61ed09b0977cf4464f9efa533d0" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' idx='4' parentid='ResponsesView' tag='SPAN' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -148,7 +151,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2" DelayMS="2" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -160,7 +163,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea87a31a-c1ec-4d27-8d56-293b625137bf" InformativeScreenshot="6db0a9cf3ebcb7e2ec84798b4b50e827" Selector="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='Week 1 (Responses) - Google Sheets — Mozilla Firefox' /&gt;&lt;ctrl name='Week 1 (Responses) - Google Sheets — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='Week 1 (Responses) - Google Sheets' role='application' /&gt;&lt;ctrl name='Menu bar' role='banner' /&gt;&lt;ctrl name='File' role='menu item' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea87a31a-c1ec-4d27-8d56-293b625137bf" InformativeScreenshot="d27686c9be5e7205a75b72b8d2344b80" Selector="&lt;webctrl aaname='Download responses (.csv)' tag='DIV' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -170,80 +173,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:ClickText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" FormattedText="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Text 'DIV'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="ClickText_1" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="Download">
-                <ui:ClickText.CursorPosition>
-                  <ui:CursorPosition Position="Center">
-                    <ui:CursorPosition.OffsetX>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetX>
-                    <ui:CursorPosition.OffsetY>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetY>
-                  </ui:CursorPosition>
-                </ui:ClickText.CursorPosition>
-                <ui:ClickText.Target>
-                  <ui:Target Element="{x:Null}" Id="f055cfa6-b368-40c0-9700-51af6579c690" InformativeScreenshot="cf49a902acfd86c211bc80493fa356f7" Selector="&lt;webctrl aria-role='menu' idx='13' tag='DIV' /&gt;">
-                    <ui:Target.ClippingRegion>
-                      <ui:Region Rectangle="18, 214, 281, 34" />
-                    </ui:Target.ClippingRegion>
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </ui:ClickText.Target>
-              </ui:ClickText>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
-                <ui:Click.CursorPosition>
-                  <ui:CursorPosition Position="Center">
-                    <ui:CursorPosition.OffsetX>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetX>
-                    <ui:CursorPosition.OffsetY>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetY>
-                  </ui:CursorPosition>
-                </ui:Click.CursorPosition>
-                <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea87a31a-c1ec-4d27-8d56-293b625137bf" InformativeScreenshot="c69dcd6c1453aa2d0b176e1f8ae1c3eb" Selector="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='Week 1 (Responses) - Google Sheets — Mozilla Firefox' /&gt;&lt;ctrl name='Week 1 (Responses) - Google Sheets — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='Week 1 (Responses) - Google Sheets' role='application' /&gt;&lt;ctrl name='Menu bar' role='banner' /&gt;&lt;ctrl name='File Microsoft Excel (.xlsx) x' role='menu item' /&gt;&lt;ctrl name='Microsoft Excel (.xlsx) x' role='menu item' /&gt;&lt;ctrl name='Microsoft Excel (.xlsx) x' role='span' /&gt;&lt;ctrl name='Microsoft E' role='editable text' /&gt;">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </ui:Click.Target>
-              </ui:Click>
-              <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetId="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="johnsongdss@gmail.com" Action="UseExisting" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="433.6,631.2" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_1" Mode="Browse" UseConnectionService="False" UserEmail="johnsongdss@gmail.com">
-                <ugas:GoogleSheetsApplicationScope.Body>
-                  <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="Spreadsheet" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,336" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <uga:DownloadSpreadsheet ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" LocalFilepath="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Download Spreadsheet" DownloadAs="Xlsx" DownloadPath="C:\Users\User\Documents\GitHub\InautoProject" sap:VirtualizedContainerService.HintSize="333.6,243.2" sap2010:WorkflowViewState.IdRef="DownloadSpreadsheet_1" />
-                    </Sequence>
-                  </ActivityAction>
-                </ugas:GoogleSheetsApplicationScope.Body>
-                <ugas:GoogleSheetsApplicationScope.CredentialID>
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
-                </ugas:GoogleSheetsApplicationScope.CredentialID>
-                <ugas:GoogleSheetsApplicationScope.CredentialSecret>
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
-                </ugas:GoogleSheetsApplicationScope.CredentialSecret>
-              </ugas:GoogleSheetsApplicationScope>
+              <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,104" sap2010:WorkflowViewState.IdRef="UnZipFile_1" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 1.csv.zip" />
             </Sequence>
           </ActivityAction>
         </ui:OpenBrowser.Body>
@@ -268,13 +198,13 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,494.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,638.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -296,7 +226,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -318,7 +248,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -340,6 +270,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
+                  <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,104" sap2010:WorkflowViewState.IdRef="UnZipFile_2" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 2.csv.zip" />
                 </Sequence>
               </ActivityAction>
             </ui:OpenBrowser.Body>
@@ -359,13 +290,13 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,494.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,638.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -387,7 +318,7 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -409,7 +340,7 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="497.6,107.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -431,6 +362,7 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
+                      <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject\C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,104" sap2010:WorkflowViewState.IdRef="UnZipFile_3" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 3.csv.zip" />
                     </Sequence>
                   </ActivityAction>
                 </ui:OpenBrowser.Body>
@@ -443,19 +375,19 @@
                       <av:Size x:Key="ShapeSize">200,53.6</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="200,53.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="https://tplms.polite.edu.sg/d2l/lms/classlist/classlist.d2l?ou=198069&amp;d2l_stateScopes=%7B%221%22%3A%5B%22gridpagenum%22,%22pagenum%22,%22userclasslisttabs%22%5D,%222%22%3A%5B%22lcs%22%5D,%223%22%3A%5B%22grid%22,%22pagesize%22,%22htmleditor%22,%22hpg%22,%22searchexpandedstate%22%5D%7D&amp;d2l_stateGroups=%5B%22lcs%22,%22search%22,%22searchexpandedstate%22,%22grid%22,%22gridpagenum%22%5D&amp;d2l_statePageId=111&amp;d2l_state_lcs=%7B%22Name%22%3A%22lcs%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22lcs_vb%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22State%22%3A%7B%22SelectedKey%22%3A%221%22,%22SelectedVal%22%3A%22%22%7D%7D,%7B%22ControlId%22%3A%7B%22ID%22%3A%22lcs_g%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22State%22%3A%7B%22SelectedKey%22%3A%22206569%22,%22SelectedVal%22%3A%22%22%7D%7D%5D%7D&amp;d2l_state_search=%7B%22Name%22%3A%22search%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_9%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22DoSearch%22%3Afalse,%22IsSuggestedSearch%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_searchexpandedstate=%7B%22Name%22%3A%22searchexpandedstate%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_9%22%7D,%22StateType%22%3A%22expanded%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22IsExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_grid=%7B%22Name%22%3A%22grid%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageSize%22%3A20,%22SortField%22%3A%22%22,%22SortDir%22%3A1,%22IsSearchExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_gridpagenum=%7B%22Name%22%3A%22gridpagenum%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22pagenum%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageNum%22%3A1%7D%7D%5D%7D&amp;d2l_change=0">
+                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="550.4,792" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="https://tplms.polite.edu.sg/d2l/lms/classlist/classlist.d2l?ou=198069&amp;d2l_stateScopes=%7B%221%22%3A%5B%22gridpagenum%22,%22pagenum%22,%22userclasslisttabs%22%5D,%222%22%3A%5B%22lcs%22%5D,%223%22%3A%5B%22grid%22,%22pagesize%22,%22htmleditor%22,%22hpg%22,%22searchexpandedstate%22%5D%7D&amp;d2l_stateGroups=%5B%22lcs%22,%22search%22,%22searchexpandedstate%22,%22grid%22,%22gridpagenum%22%5D&amp;d2l_statePageId=111&amp;d2l_state_lcs=%7B%22Name%22%3A%22lcs%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22lcs_vb%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22State%22%3A%7B%22SelectedKey%22%3A%221%22,%22SelectedVal%22%3A%22%22%7D%7D,%7B%22ControlId%22%3A%7B%22ID%22%3A%22lcs_g%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22State%22%3A%7B%22SelectedKey%22%3A%22206569%22,%22SelectedVal%22%3A%22%22%7D%7D%5D%7D&amp;d2l_state_search=%7B%22Name%22%3A%22search%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_9%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22DoSearch%22%3Afalse,%22IsSuggestedSearch%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_searchexpandedstate=%7B%22Name%22%3A%22searchexpandedstate%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_9%22%7D,%22StateType%22%3A%22expanded%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22IsExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_grid=%7B%22Name%22%3A%22grid%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageSize%22%3A20,%22SortField%22%3A%22%22,%22SortDir%22%3A1,%22IsSearchExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_gridpagenum=%7B%22Name%22%3A%22gridpagenum%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22pagenum%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageNum%22%3A1%7D%7D%5D%7D&amp;d2l_change=0">
                     <ui:OpenBrowser.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="516.8,728.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="516.8,688.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="475.2,636" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="475.2,596" sap2010:WorkflowViewState.IdRef="Sequence_13">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                             </Sequence.Variables>
@@ -464,32 +396,35 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Classlist Page'" sap:VirtualizedContainerService.HintSize="433.6,387.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="d4541bbc9e06dabccb3708adb986df57" Selector="&lt;html app='chrome.exe' title='Classlist - ESE3013 Intelligent Automation - Temasek Polytechnic' /&gt;">
-                              <ui:BrowserScope.Body>
+                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Classlist Chrome_wi'" sap:VirtualizedContainerService.HintSize="433.6,503.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="c03e8dcfda3a9fb09d893623d4adc526" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Classlist - ESE3013 Intelligent Automation - Temasek Polytechnic*' /&gt;">
+                              <ui:WindowScope.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,356" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'TABLE  z_h'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='text' /&gt;&lt;column name='Last Name, First Name' attr='text' /&gt;&lt;column name='Role' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" NextLinkSelector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;a&amp;gt;span' parentid='d2l_form' tag='SPAN' /&gt;" SimulateClick="True">
+                                    <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'table This'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" NextLinkSelector="&lt;ctrl name='Classlist - ESE3013 Intelligent Automation - Temasek Polytechnic' role='document' /&gt;&lt;ctrl idx='3' role='row' /&gt;&lt;ctrl name='Page: 1 of 2Next Page 20 per page' role='cell' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Page: 1 of 2Next Page' role='cell' /&gt;&lt;ctrl name='Next Page' role='link' /&gt;&lt;ctrl name='Next Page' role='graphic' /&gt;" SimulateClick="True">
                                       <ui:ExtractData.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9dfa14fa-6754-42b1-899a-6efad03852c0" InformativeScreenshot="7a29edcc5c050235315a6c4dc60838d2" Selector="&lt;webctrl tag='TABLE' type='list' /&gt;" WaitForReady="COMPLETE">
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="35fbdcb6-8349-40f9-bc1c-49f947dafce9" InformativeScreenshot="9ed7f754b72fb27fc7c3763d1eb531b9" Selector="&lt;ctrl name='Classlist - ESE3013 Intelligent Automation - Temasek Polytechnic' role='document' /&gt;&lt;ctrl name='This table is a list of class participants. The top row lists la*' role='table' /&gt;&lt;ctrl idx='7' role='row' /&gt;&lt;ctrl name='STU_ENG, VINAYA SENTHILKUMARActions for VINAYA SENTHILKUMAR STU_*' role='row header' /&gt;">
                                           <ui:Target.TimeoutMS>
                                             <InArgument x:TypeArguments="x:Int32" />
                                           </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
                                         </ui:Target>
                                       </ui:ExtractData.Target>
                                     </ui:ExtractData>
+                                    <ui:WriteRange AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Class List.xlsx" />
                                   </Sequence>
                                 </ActivityAction>
-                              </ui:BrowserScope.Body>
-                            </ui:BrowserScope>
-                            <ui:WriteRange AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Class List.xlsx" />
+                              </ui:WindowScope.Body>
+                            </ui:WindowScope>
                           </Sequence>
                         </Sequence>
                       </ActivityAction>
