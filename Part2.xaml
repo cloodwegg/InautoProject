@@ -101,7 +101,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,638.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,699.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,7 +173,8 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,104" sap2010:WorkflowViewState.IdRef="UnZipFile_1" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 1.csv.zip" />
+              <Delay Duration="00:05:00" sap:VirtualizedContainerService.HintSize="497.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,102.4" sap2010:WorkflowViewState.IdRef="UnZipFile_1" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 1.csv.zip" />
             </Sequence>
           </ActivityAction>
         </ui:OpenBrowser.Body>
@@ -198,7 +199,7 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,638.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,699.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -270,7 +271,8 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,104" sap2010:WorkflowViewState.IdRef="UnZipFile_2" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 2.csv.zip" />
+                  <Delay Duration="00:05:00" sap:VirtualizedContainerService.HintSize="497.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,102.4" sap2010:WorkflowViewState.IdRef="UnZipFile_2" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 2.csv.zip" />
                 </Sequence>
               </ActivityAction>
             </ui:OpenBrowser.Body>
@@ -290,7 +292,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,638.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539.2,699.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -362,7 +364,8 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject\C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,104" sap2010:WorkflowViewState.IdRef="UnZipFile_3" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 3.csv.zip" />
+                      <Delay Duration="00:05:00" sap:VirtualizedContainerService.HintSize="497.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                      <bz:UnZipFile Password="{x:Null}" CodePage="1252" DisplayName="UnZip" ExtractFolderPath="C:\Users\User\Documents\GitHub\InautoProject\C:\Users\User\Documents\GitHub\InautoProject" ExtractType="Standard" sap:VirtualizedContainerService.HintSize="497.6,102.4" sap2010:WorkflowViewState.IdRef="UnZipFile_3" strZipFile="C:\Users\User\Documents\GitHub\InautoProject\Week 3.csv.zip" />
                     </Sequence>
                   </ActivityAction>
                 </ui:OpenBrowser.Body>
@@ -375,7 +378,7 @@
                       <av:Size x:Key="ShapeSize">200,53.6</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="550.4,792" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="https://tplms.polite.edu.sg/d2l/lms/classlist/classlist.d2l?ou=198069&amp;d2l_stateScopes=%7B%221%22%3A%5B%22gridpagenum%22,%22pagenum%22,%22userclasslisttabs%22%5D,%222%22%3A%5B%22lcs%22%5D,%223%22%3A%5B%22grid%22,%22pagesize%22,%22htmleditor%22,%22hpg%22,%22searchexpandedstate%22%5D%7D&amp;d2l_stateGroups=%5B%22search%22,%22searchexpandedstate%22,%22grid%22,%22gridpagenum%22%5D&amp;d2l_statePageId=111&amp;d2l_state_search=%7B%22Name%22%3A%22search%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_2%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22DoSearch%22%3Afalse,%22IsSuggestedSearch%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_searchexpandedstate=%7B%22Name%22%3A%22searchexpandedstate%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_2%22%7D,%22StateType%22%3A%22expanded%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22IsExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_grid=%7B%22Name%22%3A%22grid%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageSize%22%3A%2250%22,%22SortField%22%3A%22%22,%22SortDir%22%3A1,%22IsSearchExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_gridpagenum=%7B%22Name%22%3A%22gridpagenum%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22pagenum%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageNum%22%3A1%7D%7D%5D%7D&amp;d2l_change=0">
+                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="200,53.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="https://tplms.polite.edu.sg/d2l/lms/classlist/classlist.d2l?ou=198069&amp;d2l_stateScopes=%7B%221%22%3A%5B%22gridpagenum%22,%22pagenum%22,%22userclasslisttabs%22%5D,%222%22%3A%5B%22lcs%22%5D,%223%22%3A%5B%22grid%22,%22pagesize%22,%22htmleditor%22,%22hpg%22,%22searchexpandedstate%22%5D%7D&amp;d2l_stateGroups=%5B%22search%22,%22searchexpandedstate%22,%22grid%22,%22gridpagenum%22%5D&amp;d2l_statePageId=111&amp;d2l_state_search=%7B%22Name%22%3A%22search%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_2%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22DoSearch%22%3Afalse,%22IsSuggestedSearch%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_searchexpandedstate=%7B%22Name%22%3A%22searchexpandedstate%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_2%22%7D,%22StateType%22%3A%22expanded%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22IsExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_grid=%7B%22Name%22%3A%22grid%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageSize%22%3A%2250%22,%22SortField%22%3A%22%22,%22SortDir%22%3A1,%22IsSearchExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_gridpagenum=%7B%22Name%22%3A%22gridpagenum%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22pagenum%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageNum%22%3A1%7D%7D%5D%7D&amp;d2l_change=0">
                     <ui:OpenBrowser.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -437,51 +440,5 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,512.8</av:Point>
-          <av:Size x:Key="ShapeSize">200,53.6</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,53.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Class List.xlsx">
-        <ui:ExcelApplicationScope.Body>
-          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="600,618.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange DataTable="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="558.4,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="B1:C100" SheetName="Sheet1" />
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[&quot;Learner&quot;]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="558.4,425.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                <ui:ForEachRow.Body>
-                  <ActivityAction x:TypeArguments="sd:DataRow">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524.8,304" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[If RowRange &quot;C1:C100&quot; NotEqual &quot;Learner&quot;]" sap:VirtualizedContainerService.HintSize="483.2,211.2" sap2010:WorkflowViewState.IdRef="If_1">
-                        <If.Then>
-                          <ui:ExcelInsertDeleteRows DisplayName="Insert/Delete Rows" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteRows_1" Mode="Remove" NoRows="1" Position="1" SheetName="Sheet1" />
-                        </If.Then>
-                      </If>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:ForEachRow.Body>
-              </ui:ForEachRow>
-            </Sequence>
-          </ActivityAction>
-        </ui:ExcelApplicationScope.Body>
-      </ui:ExcelApplicationScope>
-    </FlowStep>
   </Flowchart>
 </Activity>
