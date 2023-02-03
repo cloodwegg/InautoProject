@@ -375,7 +375,7 @@
                       <av:Size x:Key="ShapeSize">200,53.6</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="550.4,792" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="https://tplms.polite.edu.sg/d2l/lms/classlist/classlist.d2l?ou=198069&amp;d2l_stateScopes=%7B%221%22%3A%5B%22gridpagenum%22,%22pagenum%22,%22userclasslisttabs%22%5D,%222%22%3A%5B%22lcs%22%5D,%223%22%3A%5B%22grid%22,%22pagesize%22,%22htmleditor%22,%22hpg%22,%22searchexpandedstate%22%5D%7D&amp;d2l_stateGroups=%5B%22lcs%22,%22search%22,%22searchexpandedstate%22,%22grid%22,%22gridpagenum%22%5D&amp;d2l_statePageId=111&amp;d2l_state_lcs=%7B%22Name%22%3A%22lcs%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22lcs_vb%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22State%22%3A%7B%22SelectedKey%22%3A%221%22,%22SelectedVal%22%3A%22%22%7D%7D,%7B%22ControlId%22%3A%7B%22ID%22%3A%22lcs_g%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22State%22%3A%7B%22SelectedKey%22%3A%22206569%22,%22SelectedVal%22%3A%22%22%7D%7D%5D%7D&amp;d2l_state_search=%7B%22Name%22%3A%22search%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_9%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22DoSearch%22%3Afalse,%22IsSuggestedSearch%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_searchexpandedstate=%7B%22Name%22%3A%22searchexpandedstate%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_9%22%7D,%22StateType%22%3A%22expanded%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22IsExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_grid=%7B%22Name%22%3A%22grid%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageSize%22%3A20,%22SortField%22%3A%22%22,%22SortDir%22%3A1,%22IsSearchExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_gridpagenum=%7B%22Name%22%3A%22gridpagenum%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22pagenum%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageNum%22%3A1%7D%7D%5D%7D&amp;d2l_change=0">
+                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="550.4,792" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="https://tplms.polite.edu.sg/d2l/lms/classlist/classlist.d2l?ou=198069&amp;d2l_stateScopes=%7B%221%22%3A%5B%22gridpagenum%22,%22pagenum%22,%22userclasslisttabs%22%5D,%222%22%3A%5B%22lcs%22%5D,%223%22%3A%5B%22grid%22,%22pagesize%22,%22htmleditor%22,%22hpg%22,%22searchexpandedstate%22%5D%7D&amp;d2l_stateGroups=%5B%22search%22,%22searchexpandedstate%22,%22grid%22,%22gridpagenum%22%5D&amp;d2l_statePageId=111&amp;d2l_state_search=%7B%22Name%22%3A%22search%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_2%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22DoSearch%22%3Afalse,%22IsSuggestedSearch%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_searchexpandedstate=%7B%22Name%22%3A%22searchexpandedstate%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22ctl_2%22%7D,%22StateType%22%3A%22expanded%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers_s%22,%22State%22%3A%7B%22IsExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_grid=%7B%22Name%22%3A%22grid%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageSize%22%3A%2250%22,%22SortField%22%3A%22%22,%22SortDir%22%3A1,%22IsSearchExpanded%22%3Afalse%7D%7D%5D%7D&amp;d2l_state_gridpagenum=%7B%22Name%22%3A%22gridpagenum%22,%22Controls%22%3A%5B%7B%22ControlId%22%3A%7B%22ID%22%3A%22grid_users%22%7D,%22StateType%22%3A%22pagenum%22,%22Key%22%3A%22%22,%22Name%22%3A%22gridUsers%22,%22State%22%3A%7B%22PageNum%22%3A1%7D%7D%5D%7D&amp;d2l_change=0">
                     <ui:OpenBrowser.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -387,7 +387,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="475.2,596" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="475.2,596" sap2010:WorkflowViewState.IdRef="Sequence_15">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                             </Sequence.Variables>
@@ -396,35 +396,32 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Classlist Chrome_wi'" sap:VirtualizedContainerService.HintSize="433.6,503.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="c03e8dcfda3a9fb09d893623d4adc526" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Classlist - ESE3013 Intelligent Automation - Temasek Polytechnic*' /&gt;">
-                              <ui:WindowScope.Body>
+                            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Classlist Page'" sap:VirtualizedContainerService.HintSize="433.6,503.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="70ba3c225843f488e50b834d1174dae7" Selector="&lt;html app='chrome.exe' title='Classlist - ESE3013 Intelligent Automation - Temasek Polytechnic' /&gt;">
+                              <ui:BrowserScope.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,356" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,356" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'table This'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" NextLinkSelector="&lt;ctrl name='Classlist - ESE3013 Intelligent Automation - Temasek Polytechnic' role='document' /&gt;&lt;ctrl idx='3' role='row' /&gt;&lt;ctrl name='Page: 1 of 2Next Page 20 per page' role='cell' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Page: 1 of 2Next Page' role='cell' /&gt;&lt;ctrl name='Next Page' role='link' /&gt;&lt;ctrl name='Next Page' role='graphic' /&gt;" SimulateClick="True">
+                                    <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'TABLE  z_e'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='text' /&gt;&lt;column name='Last Name, First Name' attr='text' /&gt;&lt;column name='Role' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="100" SimulateClick="True">
                                       <ui:ExtractData.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="35fbdcb6-8349-40f9-bc1c-49f947dafce9" InformativeScreenshot="9ed7f754b72fb27fc7c3763d1eb531b9" Selector="&lt;ctrl name='Classlist - ESE3013 Intelligent Automation - Temasek Polytechnic' role='document' /&gt;&lt;ctrl name='This table is a list of class participants. The top row lists la*' role='table' /&gt;&lt;ctrl idx='7' role='row' /&gt;&lt;ctrl name='STU_ENG, VINAYA SENTHILKUMARActions for VINAYA SENTHILKUMAR STU_*' role='row header' /&gt;">
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3f29151-4fb9-44aa-82dc-7f823f87d718" InformativeScreenshot="140f23c9388d14d2d6486728dbeb0e2a" Selector="&lt;webctrl id='z_e' tag='TABLE' /&gt;" WaitForReady="COMPLETE">
                                           <ui:Target.TimeoutMS>
                                             <InArgument x:TypeArguments="x:Int32" />
                                           </ui:Target.TimeoutMS>
-                                          <ui:Target.WaitForReady>
-                                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                                          </ui:Target.WaitForReady>
                                         </ui:Target>
                                       </ui:ExtractData.Target>
                                     </ui:ExtractData>
                                     <ui:WriteRange AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Class List.xlsx" />
                                   </Sequence>
                                 </ActivityAction>
-                              </ui:WindowScope.Body>
-                            </ui:WindowScope>
+                              </ui:BrowserScope.Body>
+                            </ui:BrowserScope>
                           </Sequence>
                         </Sequence>
                       </ActivityAction>
